@@ -42,3 +42,38 @@ Install in your project an git commit linter:
 ```bash
     npm i -D typescript @types/node
 ```
+
+#### Create and edit the tsconfig.json file
+
+```bash
+    echo '{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "module": "commonjs",
+        "target": "es2020",
+        "esModuleInterop": true,
+        "allowJs": true
+    }
+}' >> tsconfig.json
+```
+
+### Rules to standarise the development: [standardjs](https://standardjs.com)
+
+When use typescript we need to install eslint to works with standardjs: [eslint-config-standard-with-typescript](https://github.com/standard/eslint-config-standard-with-typescript)
+
+```bash
+npm install --save-dev eslint@7 eslint-plugin-promise@4 eslint-plugin-import@2 eslint-plugin-node@11 @typescript-eslint/eslint-plugin@4 eslint-config-standard-with-typescript
+```
+
+#### Configure the ESLint
+```bash
+echo '{
+    "extends": "standard-with-typescript",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    }
+}' >> .eslintrc.json
+```
+
+
+
