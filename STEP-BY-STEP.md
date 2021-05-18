@@ -76,4 +76,28 @@ echo '{
 ```
 
 
-
+#### Install package husky to hook scripts [Husky](https://www.npmjs.com/package/husky)
+```bash
+    npm i -D husky
+```
+#### ..and lint-staged
+```bash
+    npm i -D lint-staged
+```
+#### we need to configure Lint Staged creating .lintstagedrc.json file
+```bash
+echo '{
+    "*.ts": [
+        "eslint 'src/**' --fix",
+        "git add"
+    ]
+}' >> .lintstagedrc.json
+```
+#### we need to configure Husky creating .huskyrc.json file
+```bash
+echo '{
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
+}' >> .huskyrc.json
+```
