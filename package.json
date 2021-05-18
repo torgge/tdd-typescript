@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "George A. A. Bonespirito <torgge@gmail.com> (https://github.com/torgge)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.1.0"
+  }
 }
