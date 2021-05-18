@@ -101,3 +101,11 @@ echo '{
     }
 }' >> .huskyrc.json
 ```
+### Install Jest test package
+```bash
+    npm i -D jest @types/jest ts-jest
+```
+#### initialize the jest
+```bash
+    jest --init
+```
